@@ -177,33 +177,35 @@ body[data-theme=dark] .hero:before{opacity:.5}
 .wish-card-head span{display:grid}.hero-divider b .ico-heart{margin:0 4px;font-size:.8em}
 .dark-button[type=submit]:after{content:"";width:15px;height:15px;background:currentColor;transform:scaleX(-1);-webkit-mask:var(--send) center/contain no-repeat;mask:var(--send) center/contain no-repeat;--send:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 2 11 13M22 2l-7 20-4-9-9-4z'/%3E%3C/svg%3E")}
 @keyframes seal-beat{0%,100%{transform:scale(1)}45%{transform:scale(1.08)}}
-  .invitation-card {
+.invitation-card {
   right: 0;
   width: 59%;
+  height: 390px;
   padding: 8px;
 }
 .invite-panel {
-  display: grid;
-  align-content: center;
-  gap: clamp(8px, 2vw, 16px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
   height: 100%;
-  padding: 10px 12px 10px 18px;
+  padding: 22px 12px 30px 18px;
   border: 1px solid var(--line);
   color: var(--ink);
   text-align: center;
 }
 .invite-panel p {
   margin: 0;
-  font-size: clamp(12px, 2vw, 16px);
-  line-height: 1.55;
+  font-size: clamp(13px, 2vw, 16px);
+  line-height: 1.5;
 }
 .invite-panel .invite-bismillah {
   color: var(--gold);
-  font: 700 clamp(15px, 2.2vw, 23px)/1.45 var(--display);
+  font: 700 clamp(17px, 2.4vw, 24px)/1.35 var(--display);
 }
 .invite-panel strong {
   color: var(--gold);
-  font: 700 clamp(24px, 4vw, 45px)/1.2 var(--display);
+  font: 700 clamp(26px, 4vw, 42px)/1.25 var(--display);
 }
 .invite-panel i {
   font: normal .45em var(--body);
@@ -213,8 +215,16 @@ body[data-theme=dark] .hero:before{opacity:.5}
   font-weight: 700;
 }
 .invite-panel .invite-venue {
-  font: 700 clamp(15px, 2.4vw, 22px)/1.5 var(--display);
+  font: 700 clamp(17px, 2.4vw, 22px)/1.35 var(--display);
   color: var(--gold);
+}
+@media (max-width: 520px) {
+  .invitation-card {
+    height: 305px;
+  }
+  .invite-panel {
+    padding-block: 20px 23px;
+  }
 }
 .venue-name-en {
   display: inline-block;
@@ -276,7 +286,7 @@ body[data-theme=dark] .hero:before{opacity:.5}
               <p>يسرّنا دعوتكم لحضور حفل خطوبة</p>
               <strong>أحمد <i aria-hidden="true">♥</i> منة</strong>
               <p class="invite-when">الجمعة ٢٧ نوفمبر ٢٠٢٦<br>الساعة ٨ مساءً</p>
-              <p class="invite-venue">في قاعة هوستا</p>
+              <p class="invite-venue">(قاعة هوستا)</p>
             </div>
           </article>
           <figure class="photo-card photo-small couple-photo">
@@ -473,4 +483,4 @@ try {
 }
 </script>
 </body>
-</html> 
+</html>
